@@ -47,3 +47,11 @@ dependencies {
     // TODO MAVEM DEPENDENCIES   
 }
 ```
+
+## plugin application
+
+```groovy
+plugins {
+    id 'application'
+}
+```
