@@ -1,30 +1,16 @@
 plugins {
+  id 'com.github.johnrengelman.shadow' version '8.1.1'
   id 'application'
   id 'org.openjfx.javafxplugin' version '0.1.0'
-  id 'org.beryx.jlink' version '2.23.6'
-}
+  }
 
 repositories() {
     mavenCentral()
 }
 
-
 javafx {
     version = "17"
-    modules = [ 'javafx.controls', 'javafx.fxml' ] 
+    modules = [ 'javafx.controls' ] 
 }
 
-dependencies {
-    implementation 'org.openjfx:javafx-controls:17'
-}
-
-application {
-	mainClassName("br.com.pvv.hw.App")
-	mainModule.set("br.com.pvv.hw")
-}
-
-jlink {
-	jpackage {
-		installerType = "exe"
-	}
-}
+mainClassName = "br.com.pvv.hw.App"
