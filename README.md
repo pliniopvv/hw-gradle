@@ -55,3 +55,18 @@ plugins {
     id 'application'
 }
 ```
+
+## application javafx
+
+[Tutorial do youtube](https://www.youtube.com/watch?v=bRpGnCjJ0ro)
+[Plugin github](https://github.com/openjfx/javafx-gradle-plugin)
+
+É necessária a adição da linha abaixo, invés da `jar{ ... } `
+
+Recomendavel verificar configurações adicionais disponíveis no github do plugin Gradle.
+
+- Necessário executar o `build` para `run`
+
+```groovy 
+mainClassName = "Main"
+```
