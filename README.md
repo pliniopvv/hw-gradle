@@ -70,3 +70,7 @@ Recomendavel verificar configurações adicionais disponíveis no github do plug
 ```groovy 
 mainClassName = "Main"
 ```
+
+### gerando jar com módulo javafx
+
+Embora não atendam ao propósito, as realizações executadas por [este tutorial](https://www.youtube.com/watch?v=dLH-HjiCtaI) criaram um executável (exe) funcional para o JavaFX no caminho `build\jpackage\helloworld`, apesar de dar erro ao executar o comando de build `gradle jpackage`

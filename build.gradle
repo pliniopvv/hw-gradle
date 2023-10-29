@@ -1,6 +1,7 @@
 plugins {
   id 'application'
   id 'org.openjfx.javafxplugin' version '0.1.0'
+  id 'org.beryx.jlink' version '2.23.6'
 }
 
 repositories() {
@@ -10,7 +11,20 @@ repositories() {
 
 javafx {
     version = "17"
-    modules = [ 'javafx.controls' ] 
+    modules = [ 'javafx.controls', 'javafx.fxml' ] 
 }
 
-mainClassName = "Main"
+dependencies {
+    implementation 'org.openjfx:javafx-controls:17'
+}
+
+application {
+	mainClassName("br.com.pvv.hw.App")
+	mainModule.set("br.com.pvv.hw")
+}
+
+jlink {
+	jpackage {
+		installerType = "exe"
+	}
+}
