@@ -75,6 +75,8 @@ mainClassName = "Main"
 
 Embora não atendam ao propósito, as realizações executadas por [este tutorial](https://www.youtube.com/watch?v=dLH-HjiCtaI) criaram um executável (exe) funcional para o JavaFX no caminho `build\jpackage\helloworld`, apesar de dar erro ao executar o comando de build `gradle jpackage`
 
-##### Outro plugin
+##### plugin para FatJar (shadow)
 
 O Plugin `id 'com.github.johnrengelman.shadow' version '8.1.1'` não requer nenhuma alteração, executando juntamente com o `id 'org.openjfx.javafxplugin' version '0.1.0'` e gera, na pasta build/lib, um arquivo `jar` no formato `FatJar` que inclui todas as dependências necessárias para a execução do jar. (localizar arquivo de final `-all.jar`)
+
+* É necessária a criação de uma classe "Main" que não extenda Application, conforme exemplo de projeto.
